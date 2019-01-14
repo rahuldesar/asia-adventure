@@ -14,8 +14,8 @@ gulp.task('copyHtml', function(done){
 
 
 gulp.task('copyCss', function(done){
-	gulp.src('src/css/*.css')
-		.pipe(gulp.dest('dist'));
+	gulp.src('temp/css/*.css')
+		.pipe(gulp.dest('dist/css'));
 		 done();
 
 	});
@@ -29,10 +29,25 @@ gulp.task('copyJs', function(done){
 
 	});
 
+
+gulp.task('copyImg', function(done){
+	gulp.src('src/img/**/*')
+		.pipe(gulp.dest('dist/img'));
+		 done();
+
+	});
+
+gulp.task('copyAssests', function(done){
+	gulp.src('src/assests/**/*')
+		.pipe(gulp.dest('dist/assests'));
+		 done();
+
+	});
+
 gulp.task('sassCompile', function(done){
 	gulp.src('src/sass/*.scss')
     .pipe(sass()) // Using gulp-sass
-    .pipe(gulp.dest('src/css'));
+    .pipe(gulp.dest('temp/css'));
     done();
 });
 
@@ -47,10 +62,9 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('watch', function() {
-	gulp.watch('src/sass/style.scss', gulp.series(['sassCompile','copyHtml','copyCss','copyJs'])); 
-	gulp.watch('src/index.html', gulp.series(['sassCompile','copyHtml','copyCss','copyJs']));
-	});
-
+	gulp.watch('src/sass/style.scss', gulp.series(['sassCompile','copyCss'])); 
+	gulp.watch('src/index.html', gulp.series(['copyHtml'])); 
+});
 
 //npm install --save-dev gulp-sequence
 //https://www.npmjs.com/package/gulp-merge
