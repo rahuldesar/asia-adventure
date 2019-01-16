@@ -26,6 +26,9 @@ a:hover {
 .owl-theme .owl-dots .owl-dot span {
   background: #76ad85; }
 
+.grayscaled {
+  filter: grayscale(100%); }
+
 header .top-header {
   position: relative;
   background-color: #008022;
@@ -53,7 +56,8 @@ header .top-header {
   header .top-header li {
     font-size: 14px; }
   header .top-header .right-topheader {
-    float: right; }
+    float: right;
+    /* Portrait phones and smaller */ }
     header .top-header .right-topheader a {
       padding-right: 5px; }
     header .top-header .right-topheader li {
@@ -87,6 +91,9 @@ header .top-header {
         color: #FFF; }
       header .top-header .right-topheader .dropdown .top-big-icon {
         font-size: 18px; }
+    @media (max-width: 1067px) {
+      header .top-header .right-topheader .dropdown {
+        display: none; } }
     header .top-header .right-topheader .border-one::before {
       content: "";
       position: absolute;
@@ -113,8 +120,19 @@ header .logobar {
   align-items: center;
   -webkit-justify-content: space-between;
   justify-content: space-between; }
+  @media (max-width: 500px) {
+    header .logobar {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   header .logobar .logo-img {
     width: 40%; }
+  @media (max-width: 1023px) {
+    header .logobar .logo-img {
+      width: 70%; } }
+  @media (max-width: 500px) {
+    header .logobar .logo-img {
+      width: 100%; } }
   header .logobar .logobar-btn {
     width: 200px;
     height: 26px;
@@ -128,9 +146,15 @@ header .logobar {
     padding-top: 33px; }
     header .logobar .call-for .fas {
       margin-right: 15px; }
+  @media (max-width: 1023px) {
+    header .logobar .call-for {
+      display: none; } }
   header .logobar .trip-advisor {
     width: 10%;
     padding-right: 0px; }
+    @media (max-width: 480px) {
+      header .logobar .trip-advisor {
+        display: none; } }
   header .logobar .social-top-bar .fab {
     font-size: 28px;
     padding: 0 2px;
@@ -178,6 +202,9 @@ header nav ul li {
     right: 75px;
     color: white;
     font-size: 25px; }
+  .bannerSlider .caption-banner-overlay {
+    font-size: 50px;
+    font-family: WCManoNegraBta; }
 
 .find-trip form .group-form .input-group .form-control, .modal .modal-dialog .modal-content form .form-group select, .page-blog__block form .form-group select, .page-contact .form .contact-form .form-group select, .page-customize-trip .form-group select, .page-package-listing .sort-header .form select {
   -webkit-appearance: none;
@@ -206,7 +233,7 @@ header nav ul li {
   .find-trip .fas {
     position: relative;
     left: 7px;
-    top: 1px; }
+    top: 2px; }
   .find-trip .fa-dollar-sign {
     left: 10px; }
   .find-trip .group-form {
@@ -274,6 +301,9 @@ header nav ul li {
     display: block;
     border-radius: 5px;
     /* transition: all .4s ease-in-out; */ }
+    @media (max-width: 800px) {
+      .find-trip form .group-btn .btn {
+        width: 100%; } }
   .find-trip form .group-btn .btn:hover {
     background-color: #5c5a5a; }
   .find-trip .fa {
@@ -343,8 +373,6 @@ section ul {
     justify-content: space-between;
     -webkit-align-items: center;
     align-items: center; }
-  .sBar .grayscaled {
-    filter: grayscale(100%); }
 
 .asia-adventure {
   background-color: #008022;
@@ -358,8 +386,24 @@ section ul {
   .asia-adventure .asia-content {
     padding: 50px 10px 50px 100px;
     margin-top: 75px; }
+    @media (max-width: 800px) {
+      .asia-adventure .asia-content {
+        padding: 30px 20px 10px 20px;
+        margin: unset;
+        text-align: center; } }
+    @media (max-width: 500px) {
+      .asia-adventure .asia-content {
+        padding: unset;
+        margin: 50px 30px 30px 30px;
+        text-align: center; } }
   .asia-adventure .video-wrapper {
     padding: 35px 75px; }
+    @media (max-width: 800px) {
+      .asia-adventure .video-wrapper {
+        padding: 30px 20px; } }
+    @media (max-width: 500px) {
+      .asia-adventure .video-wrapper {
+        padding: 10px; } }
 
 section .section1-header {
   font-family: "WCManoNegraBta";
@@ -387,6 +431,9 @@ section .section1-tours {
     text-align: center;
     border-radius: 18px;
     color: #fff; }
+    @media (max-width: 480px) {
+      section .section1-tours .tour-price {
+        padding-top: 3px; } }
   section .section1-tours .days-block {
     display: block;
     background: #3DB9EE;
@@ -433,10 +480,21 @@ section .section1-tours {
     background-color: #FBB316;
     padding-top: 3px;
     color: #FFF;
-    font-weight: 400; }
+    font-weight: 400;
+    border: none; }
 
 section .img-thumb {
   position: relative; }
+
+@media (max-width: 800px) {
+  section .img-thumb {
+    margin: 30px 0px 20px 20px; } }
+
+@media (max-width: 500px) {
+  section .img-thumb {
+    margin: 20px 0px 20px 10px; }
+  section .section2-header {
+    font-size: 1.5em; } }
 
 section .section2-header {
   font-family: "WCManoNegraBta";
@@ -526,11 +584,34 @@ section .section2-part2 h6::before {
   background-color: #008022;
   position: relative; }
 
+@media (max-width: 1050px) {
+  .popular-adventure-slider .img-adventure {
+    height: 400px; } }
+
+@media (max-width: 800px) {
+  .popular-adventure-slider .owl-carousel .owl-item .img-wrapper {
+    width: 120%;
+    overflow: hidden; } }
+
+@media (max-width: 500px) {
+  .popular-adventure-slider .owl-carousel .owl-item .img-wrapper {
+    width: 130%;
+    overflow: hidden; } }
+
 .popular-adventure-slider .content {
   margin: 90px 125px 0px 0px;
   color: #FFF;
   position: relative;
   left: -100px; }
+  @media (max-width: 1050px) {
+    .popular-adventure-slider .content {
+      margin: 45px 125px 20px 0px;
+      left: -70px; } }
+  @media (max-width: 800px) {
+    .popular-adventure-slider .content {
+      text-align: center;
+      margin: 30px;
+      left: unset; } }
   .popular-adventure-slider .content h3 {
     font-family: "WCManoNegraBta";
     font-weight: 600;
@@ -598,11 +679,13 @@ section .section2-part2 h6::before {
   margin-bottom: 30px; }
 
 .top-asia-slider .mini-slider {
+  margin-bottom: 80px;
   position: relative; }
   .top-asia-slider .mini-slider .item {
-    padding: 50px 50px 30px 50px;
+    padding: 50px 0px;
     background-color: #F1F3F7;
-    color: #173A78; }
+    color: #173A78;
+    text-align: center; }
   .top-asia-slider .mini-slider h6 {
     display: block;
     text-align: center;
@@ -628,25 +711,175 @@ section .section2-part2 h6::before {
     background: #173A78; }
 
 footer .greenBg {
+  position: relative;
   background-color: #008022; }
   footer .greenBg h5 {
     color: #FFF; }
 
+footer .greenBg::before {
+  position: absolute;
+  content: "";
+  background: url(../img/lower-footer-style.png);
+  background-repeat: no-repeat;
+  /* -webkit-background-size: cover; */
+  -o-background-size: cover;
+  /* background-size: cover; */
+  width: 300px;
+  z-index: 999999999999999;
+  height: 100%;
+  top: -42px;
+  left: 50%;
+  -webkit-transform: translate(-143px, 0);
+  -moz-transform: translate(-143px, 0);
+  -ms-transform: translate(-143px, 0);
+  -o-transform: translate(-143px, 0);
+  transform: translate(-143px, 0); }
+
+footer .social-links-bar {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
+  margin-left: 20%; }
+  @media (max-width: 800px) {
+    footer .social-links-bar {
+      width: 72%;
+      margin-left: 14%; } }
+  footer .social-links-bar .social-wrapper {
+    display: inline-block;
+    position: relative;
+    color: #FFF;
+    padding: 10px; }
+    footer .social-links-bar .social-wrapper .fab {
+      padding-right: 20px;
+      font-size: 35px; }
+      @media (max-width: 800px) {
+        footer .social-links-bar .social-wrapper .fab {
+          padding-right: 10px;
+          padding-left: 10px; } }
+      @media (max-width: 500px) {
+        footer .social-links-bar .social-wrapper .fab {
+          padding-right: 0px; } }
+    footer .social-links-bar .social-wrapper .social-info {
+      display: inline-block;
+      position: relative;
+      bottom: -5px; }
+      footer .social-links-bar .social-wrapper .social-info .counter {
+        background: #3191FF;
+        text-align: center;
+        width: 70px;
+        border-radius: 5px; }
+        footer .social-links-bar .social-wrapper .social-info .counter p {
+          position: relative;
+          bottom: -2px; }
+
 footer ul {
   list-style: none;
-  padding-left: 20px; }
-  footer ul li::before {
-    font-family: "Font Awesome 5 Free";
-    content: '\f061';
-    font-weight: 600;
-    color: red; }
+  padding-left: 0px; }
+  footer ul .fas {
+    font-size: 14px; }
 
-footer .lower-footer ul {
+footer .bot-footer-logobar {
+  padding: 40px 0 15px 0;
+  -webkit-align-items: center;
+  align-items: center; }
+  footer .bot-footer-logobar li {
+    padding-right: 4px; }
+
+footer .vertical-fix-lowerfooter {
+  padding-top: 25px; }
+  @media (max-width: 480px) {
+    footer .vertical-fix-lowerfooter {
+      padding-top: 5px; } }
+
+footer .lower-footer ul, footer .lower-footer2 ul {
   list-style: none;
   color: #A8A8A8; }
-  footer .lower-footer ul li {
+  footer .lower-footer ul li, footer .lower-footer2 ul li {
     display: inline-block; }
-    footer .lower-footer ul li a {
+    footer .lower-footer ul li a, footer .lower-footer2 ul li a {
       color: #A8A8A8; }
-    footer .lower-footer ul li a:hover {
-      color: #DF6E1E; }
+  footer .lower-footer ul li::before, footer .lower-footer2 ul li::before {
+    content: ''; }
+
+footer .lower-footer p, footer .lower-footer2 p {
+  font-size: 14px;
+  color: #8d9096;
+  margin-bottom: 3px; }
+
+footer .lower-footer2 {
+  padding-top: 20px;
+  position: relative; }
+  footer .lower-footer2 ul {
+    margin-bottom: 0px; }
+    footer .lower-footer2 ul li {
+      font-size: 14px; }
+
+footer .footer-href {
+  position: relative; }
+
+footer .href-foot::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  background: #8d9096;
+  top: 0px;
+  left: 0px; }
+
+@media screen and (max-width: 991px) {
+  .find-trip form .group-form {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .find-trip form .group-form .input-group select.form-control {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 28px;
+    background-size: 25px; } }
+
+@media screen and (max-width: 800px) {
+  .find-trip form .group-form {
+    width: 50%;
+    float: left;
+    display: block;
+    margin-bottom: 15px; }
+  .find-trip form .group-btn {
+    display: block;
+    width: 100%; } }
+
+@media (max-width: 800px) {
+  .md-text-align {
+    text-align: center; }
+  .footer-col-md-align {
+    padding: 15px 0px; } }
+
+@media screen and (max-width: 500px) {
+  footer {
+    text-align: center; }
+  .footer-col-md-align {
+    padding: 10px 0px; }
+  .xs-pad-15-top {
+    padding-top: 15px; }
+  .xs-pad-10-lr {
+    padding: 0px 5px; }
+  .xs-section0-fix {
+    text-align: center; }
+    .xs-section0-fix ul {
+      text-align: left; }
+  .bannerSlider .item {
+    position: relative;
+    width: 100%;
+    height: 90vh; }
+  .bannerSlider .item img {
+    height: 100%;
+    object-fit: cover; }
+  .bannerSlider .owl-prev > .fa {
+    left: 15px; }
+  .bannerSlider .owl-next > .fa {
+    right: 15px; }
+  .asia-adventure .row {
+    margin: 0px; }
+  .xs-padding-top-header {
+    padding-bottom: 15px; } }

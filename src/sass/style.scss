@@ -46,6 +46,10 @@ a:hover{
 }
 
 
+.grayscaled{
+	filter: grayscale(100%);
+}
+
 
 header{
 
@@ -144,6 +148,20 @@ header{
 	    	}
 
 
+
+	    	@media (max-width: 1067px) {
+	    		.dropdown{
+	    			display: none;
+	    		}
+
+	    	}
+
+	    	/* Portrait phones and smaller */
+	    	
+
+
+
+
 	    	.border-one::before{
 	    		content: "";
 			    position: absolute;
@@ -181,9 +199,27 @@ header{
 		    
 		    -webkit-justify-content: space-between;
 		            justify-content: space-between;
+		@media (max-width: 500px){
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
 		    
 		    .logo-img{
 	    	    width: 40%;
+		    }
+
+		    @media (max-width: 1023px) {
+		    	.logo-img{
+		    	width: 70%;
+		    	}
+
+		    }
+		    @media (max-width: 500px) {
+		    	.logo-img{
+		    	width: 100%;
+		    	}
+
 		    }
 		    
 
@@ -206,9 +242,21 @@ header{
 		    	}
 		    }
 
+		    @media (max-width: 1023px) {
+		    	.call-for{
+		    	display: none;
+		    	}
+
+		    }
+
+
+
 		    .trip-advisor{
 		    	width: 10%;
 		    	padding-right: 0px;
+		    		@media (max-width: 480px) {
+				    	display: none;
+		    	}
 		    }
 
 		    .social-top-bar{
@@ -291,6 +339,13 @@ header{
 
 	}
 
+	.caption-banner-overlay{
+		font-size: 50px;
+		font-family: WCManoNegraBta;
+
+		
+	}
+
 }
 
 
@@ -327,7 +382,7 @@ header{
 	.fas{
 		position: relative;
 		    left: 7px;
-		    top: 1px;
+		    top: 2px;
 	
 	}
 	.fa-dollar-sign{
@@ -417,6 +472,13 @@ header{
 	        display: block;
 	        border-radius: 5px;
 	        /* transition: all .4s ease-in-out; */
+	        	@media (max-width: 800px) {
+	        		width: 100%;
+
+
+	        }
+
+	        
 	}
 
 	form .group-btn .btn:hover{
@@ -516,9 +578,7 @@ section{
 			         align-items: center;
 	}
 
-	.grayscaled{
-		filter: grayscale(100%);
-	}
+	
 }
 
 .asia-adventure{	
@@ -536,11 +596,40 @@ section{
 	.asia-content{
 		padding: 50px 10px 50px 100px;
 	    margin-top: 75px;
+	    
+
+	    @media (max-width: 800px) {
+	    	padding: 30px 20px 10px 20px;
+	    	margin: unset;
+	    	text-align: center;
+	    }
+	    @media (max-width: 500px) {
+	    	 padding: unset;
+			 margin: 50px 30px 30px 30px;
+	    	 text-align: center;
+	    }
 	}
 	.video-wrapper{
 		padding: 35px 75px;
+		@media (max-width: 800px) {
+			 padding: 30px 20px;
 		
+		}
+		
+
+	    @media (max-width: 500px) {
+	    	 padding: 10px;
+			 
+	    }
+
 	}
+
+
+
+
+
+
+
 }
 
 
@@ -575,7 +664,9 @@ section{
 			text-align: center;
 			border-radius: 18px;
 			color: #fff;
-			
+			@media (max-width: 480px) {			
+				padding-top: 3px;
+			}
 		}
 
 		.days-block{
@@ -643,6 +734,7 @@ section{
 					padding-top: 3px;
 					color: #FFF;
 					font-weight: 400;
+					border:none;
 				}
 		}
 
@@ -659,6 +751,25 @@ section{
 		position: relative;
 	}
 
+	@media (max-width: 800px) {
+		.img-thumb{
+			margin: 30px 0px 20px 20px;
+			}
+	}
+
+
+	@media (max-width: 500px) {
+		.img-thumb{
+			margin: 20px 0px 20px 10px;
+			}
+
+		.section2-header{
+			font-size: 1.5em;
+		}
+
+	}
+	
+
 	.section2-header{
 		font-family: "WCManoNegraBta";
 		font-weight: 600;
@@ -667,6 +778,8 @@ section{
 		margin: 60px 0;
 		
 	}
+
+
 	.section2-header::after{
 		content:"";
 		position: absolute;
@@ -787,11 +900,58 @@ section{
 		background-color:$primary-color;
 		position: relative;
 	}
+
+	@media(max-width: 1050px){
+		.img-adventure{
+			    height: 400px;
+		}
+	}
+
+
+	@media (max-width: 800px) {
+
+		.owl-carousel .owl-item .img-wrapper {
+		   width: 120%;
+		   overflow: hidden;
+		}
+	
+	}
+
+	@media (max-width: 500px) {
+
+		.owl-carousel .owl-item .img-wrapper {
+		   width: 130%;
+		   overflow: hidden;
+		}
+		 
+
+
+	}
+	
+
+
 	.content{
 		margin:90px 125px 0px 0px;
 		color: #FFF;
 		position:relative;
 		left: -100px;
+		
+		@media(max-width: 1050px){
+			margin: 45px 125px 20px 0px;
+		    left: -70px;
+		}
+		
+		@media (max-width: 800px) {
+			    text-align: center;
+			    margin: 30px;
+			    left: unset;
+			
+
+		}
+
+
+		
+
 		
 		h3{
 			font-family: "WCManoNegraBta";
@@ -863,6 +1023,9 @@ section{
 
 }
 
+
+
+
 .top-asia-slider{
 	h3{
 		text-align: center;
@@ -883,11 +1046,16 @@ section{
 
 
 	.mini-slider{
+		margin-bottom: 80px;
 		position: relative;
+		
+
+
 		.item{
-			padding:50px 50px 30px 50px;
+			padding:50px 0px;
 			background-color: #F1F3F7;
 			color:$mini-carousel-color;
+			text-align: center;
 		}
 		h6{
 			display: block;
@@ -929,32 +1097,126 @@ section{
 
 footer{
 	.greenBg{
+		position: relative;
 		background-color: $primary-color;
 		h5{
 			color: #FFF;
 		}
 	}
 
+	.greenBg::before{
+		position: absolute;
+		content: "";
+		background: url(../img/lower-footer-style.png);
+		background-repeat: no-repeat;
+		/* -webkit-background-size: cover; */
+		-o-background-size: cover;
+		/* background-size: cover; */
+		width: 300px;
+		z-index: 999999999999999;
+		height: 100%;
+		top: -42px;
+		left: 50%;
+		-webkit-transform: translate(-143px,0);
+		   -moz-transform: translate(-143px,0);
+		    -ms-transform: translate(-143px,0);
+		     -o-transform: translate(-143px,0);
+		        transform: translate(-143px,0);
+		
+	
+	}
+	 .social-links-bar{
+		 	padding-top: 40px;
+		 	padding-bottom: 30px;
+		    display: flex;
+		    flex-direction: row;
+		    justify-content: space-evenly;
+		    width: 60%;
+		    margin-left: 20%;
+		    
 
+	    	    @media(max-width: 800px){
+			    	width: 72%;
+			    	margin-left: 14%;
+
+	    	    }
+
+	    
+	    .social-wrapper{
+	    	display: inline-block;
+	    	position: relative;
+	    	color: #FFF;
+	    	padding: 10px;
+	    	
+	    	.fab{
+	    	    padding-right: 20px;
+	    	    font-size: 35px;
+	    	    
+	    	    @media(max-width: 800px){
+    	    	    padding-right: 10px;
+    	    	    padding-left: 10px;
+	    	    }
+	    	  
+	    	    @media(max-width: 500px){
+    	    	    padding-right: 0px;
+	    	    }
+	    	}
+	    	
+	    	.social-info{
+	    		display: inline-block;
+	    		position: relative;
+	    		bottom: -5px;
+	    		
+
+	    		.counter{
+	    			background: #3191FF;
+    			    text-align: center;
+    			    width: 70px;
+    			    border-radius: 5px;
+    			    
+    			    p{
+    			    	position: relative;
+    			    	bottom: -2px;
+    			    }
+
+	    		}
+
+	    	}
+	    }
+	}
 	ul{
 		list-style: none;
-		padding-left: 20px;
-		li{
+		padding-left: 0px;
+	
+		.fas{
+			font-size: 14px;
 			
 		}
 
-		li::before{
-			font-family: "Font Awesome 5 Free";
-			content:'\f061';
-			font-weight: 600;
-			color: red;
-			// color:$primary-color;
-		}
 
 	}
 
 
-	.lower-footer{
+	.bot-footer-logobar{
+		padding: 40px 0 15px 0;
+		-webkit-align-items: center;
+		        align-items: center;
+		    
+		    li{
+		    	padding-right: 4px;
+		    }
+	}
+
+	.vertical-fix-lowerfooter{
+		padding-top: 25px;
+		
+		    @media (max-width: 480px) {
+		    	 padding-top: 5px;
+		    }
+	}
+
+
+	.lower-footer,.lower-footer2{
 		ul{
 			list-style: none;
 			color: #A8A8A8;
@@ -964,12 +1226,154 @@ footer{
 				a{
 					color: #A8A8A8;
 				}
-				a:hover{
-					color: $secondary-color;
-				}
+				// a:hover{
+				// 	color: $secondary-color;
+				// }
 			}
+
+
+			li::before{
+				content:'';
+				// color:$primary-color;
+			}
+
+		}
+
+		p{
+			font-size: 14px;
+			color: #8d9096;
+			margin-bottom: 3px;
 		}
 	}
+
+	.lower-footer2{
+		padding-top: 20px;
+		position: relative;
+		ul{
+			margin-bottom: 0px;
+			li{
+				font-size: 14px;
+			}
+		}	
+	}
+
+	
+	.footer-href{
+		position: relative;
+	}
+
+	.href-foot::before{
+		content:'';
+		position:absolute;
+		width: 100vw;
+		height: 1px;
+		background: #8d9096;
+		top: 0px;
+		left: 0px;
+	}
+
+}
+
+
+
+@media screen and (max-width: 991px){
+	.find-trip form .group-form {
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+
+	.find-trip form .group-form .input-group select.form-control {
+	    font-size: 12px;
+	    padding-left: 20px;
+	    padding-right: 28px;
+	    background-size: 25px;
+	}
+
+}
+
+
+@media screen and (max-width: 800px){
+	.find-trip form .group-form {
+	    width: 50%;
+	    float: left;
+	    display: block;
+	    margin-bottom: 15px;
+	}
+
+	.find-trip form .group-btn {
+	    display: block;
+	    width: 100%;
+	}
+
+
+}
+
+
+@media(max-width: 800px){
+	.md-text-align{
+		text-align: center;
+	}
+
+	.footer-col-md-align{
+		padding: 15px 0px;
+	}
+
+}
+
+@media screen and (max-width: 500px){
+	footer{
+		text-align: center;
+	}
+
+	.footer-col-md-align{
+		padding: 10px 0px;
+	}
+
+
+	.xs-pad-15-top{
+		padding-top: 15px;
+	}
+
+	.xs-pad-10-lr{
+		padding:0px 5px;
+	}
+
+	.xs-section0-fix{
+		text-align: center;
+		ul{
+			text-align: left;
+		}
+	}
+	.bannerSlider .item {
+	    position: relative;
+	    width: 100%;
+	    height: 90vh;
+	}
+
+	.bannerSlider .item img {
+	    height: 100%;
+	    object-fit: cover;
+	}
+
+
+	.bannerSlider .owl-prev > .fa {
+	    left: 15px;
+	}
+	.bannerSlider .owl-next > .fa{
+		right:15px;
+	}
+
+	.asia-adventure .row{
+		margin: 0px;
+	}
+
+	.xs-padding-top-header{
+		padding-bottom: 15px;
+	}
+
+
+
+
 }
 
 
