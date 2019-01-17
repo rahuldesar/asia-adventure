@@ -171,6 +171,21 @@ header .logobar {
 header nav ul li {
   padding: 0 3px; }
 
+.fixed-icons .customize-fixed {
+  position: fixed;
+  transform: rotate(270deg);
+  z-index: 999;
+  right: -62px;
+  top: 30vh;
+  height: 35px;
+  border-radius: 7px;
+  background: #D4C200;
+  opacity: 0.85;
+  border: none;
+  -webkit-box-shadow: -5px 3px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 3px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 3px 7px 0px rgba(0, 0, 0, 0.75); }
+
 .bannerSlider {
   position: relative; }
   .bannerSlider .bannerContent {
@@ -293,8 +308,8 @@ header nav ul li {
   .find-trip form .group-btn .btn {
     height: 45px;
     width: 150px;
-    background-color: #DF6E1E;
-    color: #fff;
+    background-color: #D4C200;
+    color: black;
     text-transform: uppercase;
     font: 14px robotobold;
     /* letter-spacing: .03em; */
@@ -316,6 +331,16 @@ section .section0-header {
   font-family: "WCManoNegraBta";
   font-weight: 600;
   line-height: 1.75em; }
+
+@media (max-width: 900px) {
+  section .row-intro .md-section0-fix1 {
+    order: 3; }
+  section .row-intro .md-section0-fix2 {
+    order: 2;
+    margin-bottom: 20px; }
+  section .row-intro .md-section0-fix3 {
+    order: 1;
+    margin-bottom: 20px; } }
 
 section .testimonial-client {
   display: flex;
@@ -374,6 +399,47 @@ section ul {
     -webkit-align-items: center;
     align-items: center; }
 
+.top-asia {
+  position: relative; }
+  .top-asia .message-fixed {
+    position: absolute;
+    top: 48%;
+    right: 10%;
+    border-radius: 10px;
+    background: #FBA314;
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75); }
+  .top-asia .phone-fixed {
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    border-radius: 10px;
+    background: #067DB8;
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75); }
+  .top-asia .fas {
+    padding: 15px;
+    font-size: 30px; }
+  @media (max-width: 1500px) {
+    .top-asia .phone-fixed {
+      top: 49%;
+      left: 5%; }
+    .top-asia .message-fixed {
+      top: 49%;
+      right: 5%; } }
+  @media (max-width: 1200px) {
+    .top-asia .phone-fixed {
+      top: -1%;
+      left: 6%; }
+    .top-asia .message-fixed {
+      top: -1%;
+      right: 6%; } }
+  @media (max-width: 1000px) {
+    .top-asia .message-fixed, .top-asia .phone-fixed {
+      display: none; } }
+
 .asia-adventure {
   background-color: #008022;
   color: #FFF; }
@@ -383,9 +449,19 @@ section ul {
     font-family: "WCManoNegraBta";
     font-weight: 600;
     color: #fff; }
+  .asia-adventure .nature-img {
+    display: block;
+    /* float: right; */
+    margin: 0 auto; }
   .asia-adventure .asia-content {
-    padding: 50px 10px 50px 100px;
+    padding: 50px 10px 50px 140px;
     margin-top: 75px; }
+    @media (max-width: 1500px) {
+      .asia-adventure .asia-content {
+        padding: 50px 10px 50px 80px; } }
+    @media (max-width: 1200px) {
+      .asia-adventure .asia-content {
+        margin-top: unset; } }
     @media (max-width: 800px) {
       .asia-adventure .asia-content {
         padding: 30px 20px 10px 20px;
@@ -397,13 +473,21 @@ section ul {
         margin: 50px 30px 30px 30px;
         text-align: center; } }
   .asia-adventure .video-wrapper {
+    position: relative;
+    height: 100%;
+    width: auto;
     padding: 35px 75px; }
+    @media (max-width: 1200px) {
+      .asia-adventure .video-wrapper {
+        padding: 47px 75px; } }
     @media (max-width: 800px) {
       .asia-adventure .video-wrapper {
         padding: 30px 20px; } }
     @media (max-width: 500px) {
       .asia-adventure .video-wrapper {
         padding: 10px; } }
+  .asia-adventure .container-fluid > .row {
+    margin-right: 0px; }
 
 section .section1-header {
   font-family: "WCManoNegraBta";
@@ -712,9 +796,13 @@ section .section2-part2 h6::before {
 
 footer .greenBg {
   position: relative;
-  background-color: #008022; }
+  background-color: #008022;
+  padding-bottom: 30px; }
   footer .greenBg h5 {
     color: #FFF; }
+
+footer .footer-images {
+  padding-bottom: 10px; }
 
 footer .greenBg::before {
   position: absolute;
@@ -726,7 +814,7 @@ footer .greenBg::before {
   /* background-size: cover; */
   width: 300px;
   z-index: 999999999999999;
-  height: 100%;
+  height: 50px;
   top: -42px;
   left: 50%;
   -webkit-transform: translate(-143px, 0);
@@ -780,6 +868,8 @@ footer ul {
   padding-left: 0px; }
   footer ul .fas {
     font-size: 14px; }
+  footer ul li {
+    line-height: 1.7; }
 
 footer .bot-footer-logobar {
   padding: 40px 0 15px 0;
@@ -788,11 +878,36 @@ footer .bot-footer-logobar {
   footer .bot-footer-logobar li {
     padding-right: 4px; }
 
-footer .vertical-fix-lowerfooter {
-  padding-top: 25px; }
-  @media (max-width: 480px) {
-    footer .vertical-fix-lowerfooter {
-      padding-top: 5px; } }
+footer .lower-footer .vertical-fix-lowerfooter {
+  padding-top: 0px; }
+
+footer .lower-footer .responsive-lower-footer1 {
+  position: relative;
+  top: -18px; }
+
+@media (max-width: 1200px) {
+  footer .lower-footer .vertical-fix-lowerfooter {
+    padding-top: 0px; }
+  footer .lower-footer .responsive-lower-footer1 {
+    position: relative;
+    top: -28px; }
+  footer .lower-footer .responsive-lower-footer2 {
+    position: relative;
+    top: -10px; }
+    footer .lower-footer .responsive-lower-footer2 img {
+      padding: 10px; }
+  footer .lower-footer .responsive-lower-footer4 img {
+    padding: 1px 0px 15px 0px; } }
+
+@media (max-width: 800px) {
+  footer .lower-footer .responsive-lower-footer1 {
+    top: 0px; }
+  footer .lower-footer .responsive-lower-footer2 {
+    top: 0px; } }
+
+@media (max-width: 500) {
+  footer .lower-footer .responsive-lower-footer4 img {
+    padding: unset; } }
 
 footer .lower-footer ul, footer .lower-footer2 ul {
   list-style: none;
@@ -845,9 +960,16 @@ footer .href-foot::before {
     float: left;
     display: block;
     margin-bottom: 15px; }
+  .find-trip {
+    position: relative;
+    padding-bottom: 50px; }
   .find-trip form .group-btn {
     display: block;
-    width: 100%; } }
+    margin-bottom: 15px;
+    height: 40px;
+    position: absolute;
+    bottom: -1px;
+    width: 88%; } }
 
 @media (max-width: 800px) {
   .md-text-align {
